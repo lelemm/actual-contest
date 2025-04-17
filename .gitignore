@@ -1,36 +1,51 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Node modules
+node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
+# Build output
+.next/
+dist/
 
-# testing
-/coverage
+# Environment variables
+.env
+.env.*
 
-# next.js
-/.next/
-/out/
+# SQLite database files
+db.sqlite
+data/db.sqlite
 
-# production
-/build
+# Logs
+log.txt
 
-# misc
+# Docker-related
+Dockerfile
+.dockerignore
+docker-compose.yml
+entrypoint.sh
+run-docker.sh
+
+# Vite/PostCSS/Tailwind/Next config
+postcss.config.*
+tailwind.config.*
+next.config.*
+
+# Output of file listings or logs
+allfiles.txt
+
+# Drizzle build/migrations cache
+drizzle/migrations/meta/
+
+# IDE/editor settings
+*.swp
+*.swo
+*.idea/
+.vscode/
+
+# System files
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Lockfile (optional - if you prefer Yarn or pnpm)
+# package-lock.json
 
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Git itself
+.git/

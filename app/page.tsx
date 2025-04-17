@@ -1,101 +1,104 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Bug } from "lucide-react"
+
+import CellSystem from "./bug-squashing-competition/components/cell-system"
+import TimelineCard from "./bug-squashing-competition/components/timeline-card"
+import ObjectiveCard from "./bug-squashing-competition/components/objective-card"
+import PrizesCard from "./bug-squashing-competition/components/prizes-card"
+import ParticipationCard from "./bug-squashing-competition/components/participation-card"
+import TrackingCard from "./bug-squashing-competition/components/tracking-card"
+import Leaderboard from "./bug-squashing-competition/components/leaderboard"
+
+export default function BugSquashingCompetition() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Cell background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 opacity-70"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      {/* Cell system */}
+      <CellSystem onCellCountChange={() => {}} onBurstCountChange={() => {}} />
+
+      <div className="relative container mx-auto py-10 px-4 max-w-5xl" style={{ zIndex: 20 }}>
+        <div className="flex flex-col items-center text-center mb-10">
+          <Badge className="mb-4 bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white border-0 px-4 py-1 text-base">
+            Actual Budget
+          </Badge>
+          <h1 className="text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+            🐞 Bug Squashing Competition 🐞
+          </h1>
+          <p className="text-xl font-medium max-w-2xl">
+            Attention, awesome developers! 🚀 We&apos;re kicking off a super fun bug squashing competition for Actual Budget,
+            and we want YOU to join the party! 🎉
+          </p>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10">
+          <TimelineCard />
+          <ObjectiveCard />
+          <PrizesCard />
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 mb-10">
+          <ParticipationCard />
+          <TrackingCard />
+        </div>
+
+        <div className="flex justify-center mb-16">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/actualbudget/actual/issues?q=is%3Aissue+is%3Aopen+label%3Abug"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-auto inline-block"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            <Button
+              size="lg"
+              className="gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-pulse w-full h-full"
+            >
+              <Bug className="h-6 w-6" />🎮 Start Squashing Bugs Now! 🎮
+            </Button>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Integrated Leaderboard */}
+        <Leaderboard />
+      </div>
+
+      <style jsx global>{`
+        @keyframes float {
+          0% { transform: translate(-50%, -50%) translateY(0px) rotate(0deg); }
+          50% { transform: translate(-50%, -50%) translateY(-20px) rotate(180deg); }
+          100% { transform: translate(-50%, -50%) translateY(0px) rotate(360deg); }
+        }
+        
+        .animate-float {
+          animation: float linear infinite;
+        }
+        
+        /* Make all buttons fully clickable */
+        button {
+          position: relative;
+          cursor: pointer;
+        }
+        
+        button::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+        
+        button * {
+          position: relative;
+          z-index: 2;
+          pointer-events: none;
+        }
+      `}</style>
     </div>
-  );
+  )
 }
