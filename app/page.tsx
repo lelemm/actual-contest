@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Bug } from "lucide-react"
 
-import CellSystem from "./bug-squashing-competition/components/cell-system"
-import TimelineCard from "./bug-squashing-competition/components/timeline-card"
-import ObjectiveCard from "./bug-squashing-competition/components/objective-card"
-import PrizesCard from "./bug-squashing-competition/components/prizes-card"
-import ParticipationCard from "./bug-squashing-competition/components/participation-card"
-import TrackingCard from "./bug-squashing-competition/components/tracking-card"
-import Leaderboard from "./bug-squashing-competition/components/leaderboard"
+import CellSystem from "./components/cell-system"
+import TimelineCard from "./components/timeline-card"
+import ObjectiveCard from "./components/objective-card"
+import PrizesCard from "./components/prizes-card"
+import ParticipationCard from "./components/participation-card"
+import TrackingCard from "./components/tracking-card"
+import Leaderboard from "./components/leaderboard"
 
 export default function BugSquashingCompetition() {
   return (
