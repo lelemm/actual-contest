@@ -23,10 +23,10 @@ export default function BugSquashingCompetition() {
 
       <div className="relative container mx-auto py-10 px-4 max-w-5xl" style={{ zIndex: 20 }}>
         <div className="flex flex-col items-center text-center mb-10">
-          <Badge className="mb-4 bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white border-0 px-4 py-1 text-base">
+          <Badge className="mb-4 text-white border-0 px-4 py-1 text-base" style={{ backgroundColor: '#9446ED' }}>
             Actual Budget
           </Badge>
-          <h1 className="text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+          <h1 className="text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 pb-4">
             🐞 Bug Squashing Competition 🐞
           </h1>
           <p className="text-xl font-medium max-w-2xl">
@@ -55,7 +55,7 @@ export default function BugSquashingCompetition() {
           >
             <Button
               size="lg"
-              className="gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-pulse w-full h-full"
+              className="gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-full h-full"
             >
               <Bug className="h-6 w-6" />🎮 Start Squashing Bugs Now! 🎮
             </Button>

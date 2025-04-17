@@ -1,12 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BarChart3 } from "lucide-react"
 
 export default function TrackingCard() {
   return (
     <Card className="bg-white/40 backdrop-blur-md border border-white/30 shadow-xl transition-all duration-300 hover:-translate-y-1">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2 mb-2">
-          <BarChart3 className="h-5 w-5 text-green-500" />
           <CardTitle className="text-green-600">📊 Tracking Progress</CardTitle>
         </div>
         <CardDescription>How we&apos;ll count your amazing contributions</CardDescription>

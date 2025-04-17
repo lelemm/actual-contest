@@ -1,12 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Trophy } from "lucide-react"
 
 export default function PrizesCard() {
   return (
     <Card className="bg-white/40 backdrop-blur-md border border-white/30 shadow-xl transition-all duration-300 hover:-translate-y-1">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2 mb-2">
-          <Trophy className="h-5 w-5 text-orange-500" />
           <CardTitle className="text-orange-600">🏆 Prizes</CardTitle>
         </div>
         <CardDescription>Awesome rewards await!</CardDescription>

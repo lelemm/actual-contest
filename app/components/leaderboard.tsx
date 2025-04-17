@@ -64,7 +64,7 @@ export default function Leaderboard() {
   return (
     <div className="mt-20 mb-10 pointer-events-auto">
       <div className="flex flex-col items-center text-center mb-8">
-        <Badge className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 px-4 py-1 text-base">
+        <Badge className="mb-4 text-white border-0 px-4 py-1 text-base"  style={{ backgroundColor: '#9446ED' }}>
           Competition Standings
         </Badge>
         <h2 className="text-3xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
@@ -180,6 +180,8 @@ export default function Leaderboard() {
                             src={developer.avatar || "/placeholder.svg"}
                             alt={developer.name}
                             className="w-8 h-8 rounded-full mr-2 border-2 border-purple-200"
+                            width={8}
+                            height={8}
                           />
                           <span className="font-medium">{developer.name}</span>
                           {developer.rank === 1 && <span className="ml-2">👑</span>}
