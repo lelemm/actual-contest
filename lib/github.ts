@@ -38,6 +38,8 @@ export async function fetchBugFixPRs() {
 
     console.log(`Found ${prs.items.length} bug fix PRs`);
 
+    await db.delete(bugFixes);
+
     // Process each PR
     for (const pr of prs.items) {
       // Get PR details
@@ -84,7 +86,7 @@ export async function fetchBugFixPRs() {
 
       // Save bug fix
       const mergedAt = new Date(prDetails?.merged_at ?? new Date()).getTime();
-      console.log(mergedAt);
+
       await saveBugFix({
         prNumber: pr.number,
         title: pr.title,
