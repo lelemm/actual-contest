@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "start": "next dev",
     "build": "next build",
-    "start": "next start",
+    "preview": "next start",
     "lint": "next lint",
     "migrate": "tsx drizzle/migrate.ts",
     "sync": "curl http://localhost:3000/api/github/sync"
@@ -44,5 +44,6 @@
     "tailwindcss": "^3.4.1",
     "tsx": "^4.19.3",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "yarn@4.9.1"
 }
