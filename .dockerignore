@@ -1,0 +1,42 @@
+# Ignore node_modules (will be installed during build)
+node_modules
+
+# Ignore Git metadata
+.git
+.git/*
+
+# Ignore environment files
+.env
+.env.*
+
+# Local SQLite databases
+db.sqlite
+data/db.sqlite
+
+# Build output from Next.js
+.next
+.next/*
+
+# Logs and misc
+log.txt
+allfiles.txt
+
+# Editor/IDE settings
+.vscode
+.idea
+*.swp
+*.swo
+
+# Docs & project info (optional)
+README.md
+
+# Local dev/test scripts
+run-docker.sh
+
+# Docker configuration (optional if you want clean context)
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Migration metadata (but keep actual .sql files)
+drizzle/migrations/meta/

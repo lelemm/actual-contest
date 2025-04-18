@@ -16,13 +16,6 @@ data/db.sqlite
 # Logs
 log.txt
 
-# Docker-related
-Dockerfile
-.dockerignore
-docker-compose.yml
-entrypoint.sh
-run-docker.sh
-
 # Vite/PostCSS/Tailwind/Next config
 postcss.config.*
 tailwind.config.*
